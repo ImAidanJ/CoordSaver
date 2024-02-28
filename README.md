@@ -6,7 +6,7 @@ CHECK OUT CYBERSTATE ROLEPLAY
 https://discord.gg/An79ZgmqBJ // DISCORD
 https://cfx.re/join/a8ppbk // FIVEM
 
-### VERSION: 1.1.1
+### VERSION: 1.1.2
 
 ## HOW TO INSTALL
 1. drag coordsaver to your 'resources' folder
