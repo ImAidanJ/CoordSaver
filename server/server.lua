@@ -1,6 +1,6 @@
 -- Locals --
+
 local filename = Config.FileName
-local playerPed = GetPlayerPed(source)
 
 -- Permission Check --
 
@@ -15,10 +15,12 @@ local function hasPermission(source, permission)
     return false
 end
 
--- Pos Command --
+-- /pos command --
 
-RegisterCommand("pos", function(source, args, rawCommand)
+RegisterNetEvent('SaveCoords')
+AddEventHandler('SaveCoords', function(args)
 
+    local playerPed = GetPlayerPed(source)
     if hasPermission(source, Config.AcePermissionString) then
         if playerPed ~= nil then
             if #args < 1 then
@@ -41,13 +43,12 @@ RegisterCommand("pos", function(source, args, rawCommand)
         TriggerClientEvent("chat:addMessage", source, { template = '<div style="padding: 0.5vw; text-align: center; margin: 0.5vw; background-color: rgba(255, 0, 0, 0.6); border-radius: 3px; color: white;"><b>{0}</b></div>', args = {"^4[AJ:Coords]^0 You do not have permission to use this command."}})
     end
 
-end, false)
+end)
 
-TriggerClientEvent("chat:addSuggestion", "/pos", "Save Current Coords to File.", {{ name="Name", help="Adds a Name in Coords File."}})
+-- /clearcoords command --
 
--- ClearCoords Command --
-
-RegisterCommand("clearcoords", function(source, args, rawCommand)
+RegisterNetEvent('ClearCoords')
+AddEventHandler('ClearCoords', function(args)
 
     if hasPermission(source, Config.AcePermissionString) then
         local file = io.open(filename, "w")
@@ -58,13 +59,11 @@ RegisterCommand("clearcoords", function(source, args, rawCommand)
         TriggerClientEvent("chat:addMessage", source, { template = '<div style="padding: 0.5vw; text-align: center; margin: 0.5vw; background-color: rgba(255, 0, 0, 0.6); border-radius: 3px; color: white;"><b>{0}</b></div>', args = {"^4[AJ:Coords]^0 You do not have permission to use this command."}})
     end
 
-end, false))
-
-TriggerClientEvent("chat:addSuggestion", "/clearcoords", "Clears the Coords File.")
+end)
 
 -- Credits --
 -- Don't be weird.. Leave my Credits!!
 
 print("^4[AJ:Coords]^0 CoordSaver by ImAidanJ")
 print("^4[AJ:Coords]^0 Discord: https://discord.gg/daVVk9w9GU")
-print("^4[AJ:Coords]^0 Version: 1.1.2")
+print("^4[AJ:Coords]^0 Version: 1.2.2")
