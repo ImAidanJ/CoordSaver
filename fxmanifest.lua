@@ -3,9 +3,9 @@ fx_version 'cerulean'
 game 'gta5'
 author 'ImAidanJ'
 description 'Simple FiveM Script that saves coords to a file.'
-version '1.1.1' -- Most Likey Final
+version '1.1.2'
 
 server_script {
-    'config.lua', -- LEAVE AT THE TOP
-    'main.lua',
+    'config.lua',
+    'server/server.lua'
 }
