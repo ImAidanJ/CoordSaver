@@ -14,6 +14,6 @@ https://cfx.re/join/a8ppbk // FIVEM
 3. add 'coordinates.txt' to the same folder as your server.cfg (WHEN YOU MAKE THE FILE MAKE SURE IT SPELT CORRECTLY & IS A TEXT FILE)
 
 ## CONFIG
-1. ChatPrefix - USED TO SET CHAT PREFIX
-2. UseAcePermissions - SET TO TRUE OR FALSE IF YOU WANT TO ENABLE(TRUE) OR DISABLE(FALSE) ACE PERMS
-3. AcePermissionString - YOU CAN CHOSE A CUSTOM ACE PERM STRING (I SUGGEST LEAVING IT)
+1. UseAcePermissions - SET TO TRUE OR FALSE IF YOU WANT TO ENABLE(TRUE) OR DISABLE(FALSE) ACE PERMS
+2. AcePermissionString - YOU CAN CHOSE A CUSTOM ACE PERM STRING (I SUGGEST LEAVING IT)
+3. FileName - The File Name of the File were the Coords will be stored.
