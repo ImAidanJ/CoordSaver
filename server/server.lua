@@ -17,8 +17,7 @@ end
 
 -- /pos command --
 
-RegisterNetEvent('SaveCoords')
-AddEventHandler('SaveCoords', function(args)
+RegisterCommand("pos", function(source, args)
 
     local playerPed = GetPlayerPed(source)
     if hasPermission(source, Config.AcePermissionString) then
@@ -47,8 +46,7 @@ end)
 
 -- /clearcoords command --
 
-RegisterNetEvent('ClearCoords')
-AddEventHandler('ClearCoords', function(args)
+RegisterCommand("clearcoords", function(source, args)
 
     if hasPermission(source, Config.AcePermissionString) then
         local file = io.open(filename, "w")
@@ -66,4 +64,4 @@ end)
 
 print("^4[AJ:Coords]^0 CoordSaver by ImAidanJ")
 print("^4[AJ:Coords]^0 Discord: https://discord.gg/daVVk9w9GU")
-print("^4[AJ:Coords]^0 Version: 1.2.2")
+print("^4[AJ:Coords]^0 Version: 1.2.3")
